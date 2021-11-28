@@ -34,8 +34,9 @@ $seeder->import(
         foreach (range(1, 50) as $i) {
             $item = $mapper->createEntity();
             $item->setTitle($faker->sentence(2));
+            $item->setImage($faker->imageUrl(800, 600));
             $item->setContent($faker->paragraph(40));
-            $item->setState(1);
+            $item->setState(random_int(0, 1));
             $item->setCreatedBy(1); // 現在沒有User，先填 1
             $item->setCategoryId(1); // 現在沒有分類，先填 1
             $item->setCreated($faker->dateTimeThisYear());
