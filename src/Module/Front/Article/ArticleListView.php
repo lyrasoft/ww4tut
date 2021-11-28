@@ -65,6 +65,8 @@ class ArticleListView implements ViewModelInterface
 
         $items = $query->getIterator(Article::class);
 
+        $view->setTitle('文章列表');
+
         return compact('items', 'pagination');
     }
 }

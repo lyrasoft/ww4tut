@@ -54,11 +54,8 @@ class Article implements EntityInterface
     #[Cast(JsonCast::class)]
     protected array $attachments = [];
 
-    #[Column('introtext')]
-    protected string $introtext = '';
-
-    #[Column('fulltext')]
-    protected string $fulltext = '';
+    #[Column('content')]
+    protected string $content = '';
 
     #[Column('state')]
     protected int $state = 0;
@@ -180,30 +177,6 @@ class Article implements EntityInterface
         return $this;
     }
 
-    public function getIntrotext(): string
-    {
-        return $this->introtext;
-    }
-
-    public function setIntrotext(string $introtext): static
-    {
-        $this->introtext = $introtext;
-
-        return $this;
-    }
-
-    public function getFulltext(): string
-    {
-        return $this->fulltext;
-    }
-
-    public function setFulltext(string $fulltext): static
-    {
-        $this->fulltext = $fulltext;
-
-        return $this;
-    }
-
     public function getState(): int
     {
         return $this->state;
@@ -308,6 +281,26 @@ class Article implements EntityInterface
     public function setParams(array $params): static
     {
         $this->params = $params;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContent(): string
+    {
+        return $this->content;
+    }
+
+    /**
+     * @param  string  $content
+     *
+     * @return  static  Return self to support chaining.
+     */
+    public function setContent(string $content): static
+    {
+        $this->content = $content;
 
         return $this;
     }

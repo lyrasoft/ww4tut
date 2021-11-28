@@ -42,12 +42,21 @@ use Windwalker\Core\Router\SystemUri;
                             </h2>
 
                             <div class="mb-2 small text-muted">
-                                {{ $item->getCreated() }}
+                                {{-- 這邊將 DB UTC 時區轉成本地時區 --}}
+                                {{ $chronos->toLocalFormat($item->getCreated(), 'Y/m/d H:i:s') }}
                             </div>
 
                             <div>
-                                {!! $item->getIntrotext() !!}
-                                {!! $item->getFulltext() !!}
+                                {{-- 這邊截斷字串做摘要 --}}
+                                {!! \Windwalker\str($item->getContent())->stripHtmlTags()->truncate(100, '...') !!}
+                            </div>
+
+                            {{-- 加下面這段 --}}
+                            <div class="mt-2">
+                                <a class="btn btn-primary"
+                                    href="{{ $nav->to('article_item', ['id' => $item->getId()]) }}">
+                                    Read More
+                                </a>
                             </div>
                         </div>
                     </div>

@@ -30,7 +30,7 @@ $mig->up(
             $schema->varchar('title');
             $schema->varchar('image');
             $schema->tinyint('state');
-            $schema->text('content');
+            $schema->longtext('content');
             $schema->datetime('created');
             $schema->integer('created_by');
             $schema->json('params');
