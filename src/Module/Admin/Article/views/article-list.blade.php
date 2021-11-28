@@ -46,6 +46,12 @@ $form->setRenderer(new \Windwalker\Form\Renderer\SimpleRenderer());
             <button type="submit" style="display: none"></button>
         </div>
 
+        <div class="my-2">
+            <a href="{{ $nav->to('article_edit') }}" class="btn btn-primary btn-sm">
+                New Item
+            </a>
+        </div>
+
         <table class="table table-striped">
             <thead>
             <tr>
@@ -75,7 +81,8 @@ $form->setRenderer(new \Windwalker\Form\Renderer\SimpleRenderer());
                         @endif
                     </td>
                     <td>
-                        <button type="button" class="btn btn-sm btn-outline-danger">
+                        <button type="button" class="btn btn-sm btn-outline-danger"
+                            onclick="deleteItem({{ $item->getId() }})">
                             Delete
                         </button>
                     </td>

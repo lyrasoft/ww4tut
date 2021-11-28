@@ -69,6 +69,7 @@ class ArticleListView implements ViewModelInterface
                 fn (Query $query) => $query->where('state', '=', $state)
             )
             ->offset(($page - 1) * $limit)
+            ->order('id', 'DESC')
             ->limit($limit);
 
         if ($q !== '') {
