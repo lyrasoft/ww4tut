@@ -1,0 +1,40 @@
+# OS generated files #
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# IDE Ignores #
+.idea/
+.vscode/
+
+# Extra #
+!.gitkeep
+/dist
+
+# Configuration #
+.env
+.env.local
+.env*.local
+!.env.dist
+.dsn
+.dsn.*
+
+# Libraries
+/vendor
+/node_modules
+/bower_components
+/yarn-error.log
+/.yarn/
+/.yarnrc
+.yarnrc.yml
+.npmrc
+/theme
+
+#Test
+/phpunit.xml
+/phpunit.core.xml
+
+# Others
+

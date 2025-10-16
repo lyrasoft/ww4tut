@@ -1,0 +1,29 @@
+{
+    "name": "windwalker",
+    "private": true,
+    "scripts": {
+        "dev": "vite --mode development",
+        "build": "vite build --mode development",
+        "build:prod": "vite build",
+        "watch": "vite build --watch --mode development",
+        "postinstall": "yarn build -- install",
+        "upgrade": "yarn up '**' -R"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^7.0",
+        "@windwalker-io/core": "^4.0",
+        "@windwalker-io/fusion-next": "^0.1.0",
+        "bootstrap": "^5.3.8",
+        "cross-env": "^7.0.3",
+        "vite": "^7.1.7"
+    },
+    "//": {
+        "workspaces": [
+            "vendor/windwalker/core/assets/*"
+        ]
+    },
+    "packageManager": "yarn@4.9.4+sha512.7b1cb0b62abba6a537b3a2ce00811a843bea02bcf53138581a6ae5b1bf563f734872bd47de49ce32a9ca9dcaff995aa789577ffb16811da7c603dcf69e73750b",
+    "devDependencies": {
+        "@types/bootstrap": "^5"
+    }
+}
