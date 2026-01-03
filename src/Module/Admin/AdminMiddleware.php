@@ -30,6 +30,7 @@ class AdminMiddleware extends AbstractLifecycleMiddleware
         $this->asset->importMap('@main', '@vite/src/admin/main.ts');
         $this->asset->module('@vite/src/admin/main.ts');
 
+        $this->asset->css('vendor/@fortawesome/fontawesome-free/css/all.css');
         $this->asset->css('@vite/scss/admin/main.scss');
     }
 

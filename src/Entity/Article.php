@@ -14,12 +14,8 @@ use Windwalker\ORM\Attributes\EntitySetup;
 use Windwalker\ORM\Attributes\JsonObject;
 use Windwalker\ORM\Attributes\PK;
 use Windwalker\ORM\Attributes\Table;
-use Windwalker\ORM\Attributes\Watch;
 use Windwalker\ORM\EntityInterface;
 use Windwalker\ORM\EntityTrait;
-use Windwalker\ORM\Event\AfterDeleteEvent;
-use Windwalker\ORM\Event\BeforeSaveEvent;
-use Windwalker\ORM\Event\WatchEvent;
 use Windwalker\ORM\Metadata\EntityMetadata;
 
 // phpcs:disable
@@ -67,18 +63,5 @@ class Article implements EntityInterface
     public static function setup(EntityMetadata $metadata): void
     {
         //
-    }
-
-    #[AfterDeleteEvent]
-    public static function afterDalete(AfterDeleteEvent $event)
-    {
-        $orm = $event->orm;
-        /** @var static $item */
-        $item = $event->entity;
-
-        $orm->deleteBatch(
-            Article::class,
-            ['category_id' => $item->id]
-        );
     }
 }

@@ -18,7 +18,9 @@
         "windwalker/dom": "^4.0",
         "windwalker/edge": "^4.0",
         "asika/cross-env": "^2.0",
-        "windwalker/orm": "^4.0"
+        "windwalker/orm": "^4.0",
+        "windwalker/form": "^4.2",
+        "windwalker/session": "^4.2"
     },
     "scripts": {
         "post-create-project-cmd": [

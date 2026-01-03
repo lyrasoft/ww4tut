@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a4b432e0bf60a71948c7acdaf690967",
+    "content-hash": "0e76db19173916d109225a27f8ed4c06",
     "packages": [
         {
             "name": "asika/agent",
@@ -3631,6 +3631,69 @@
             "time": "2025-10-13T09:19:10+00:00"
         },
         {
+            "name": "windwalker/form",
+            "version": "4.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/windwalker-io/form.git",
+                "reference": "0ee26a2d7bc57d1d57b4044a6fe7b15ce90aba27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/windwalker-io/form/zipball/0ee26a2d7bc57d1d57b4044a6fe7b15ce90aba27",
+                "reference": "0ee26a2d7bc57d1d57b4044a6fe7b15ce90aba27",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.4.6",
+                "windwalker/attributes": "^4.0",
+                "windwalker/data": "^4.0",
+                "windwalker/dom": "^4.0",
+                "windwalker/filter": "^4.0",
+                "windwalker/utilities": "^4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.0||^11.0||^12.0",
+                "windwalker/test": "^4.0"
+            },
+            "type": "windwalker-package",
+            "extra": {
+                "windwalker": {
+                    "packages": [
+                        "Windwalker\\Form\\FormPackage"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/bootstrap.php"
+                ],
+                "psr-4": {
+                    "Windwalker\\Form\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Windwalker Form package",
+            "homepage": "https://github.com/windwalker-io/form",
+            "keywords": [
+                "form",
+                "form-builder",
+                "framework",
+                "html",
+                "windwalker"
+            ],
+            "support": {
+                "source": "https://github.com/windwalker-io/form/tree/4.2.3"
+            },
+            "time": "2025-11-27T06:55:28+00:00"
+        },
+        {
             "name": "windwalker/http",
             "version": "4.2.3",
             "source": {
@@ -4000,6 +4063,71 @@
                 "source": "https://github.com/windwalker-io/scalars/tree/4.2.3"
             },
             "time": "2025-10-13T09:19:10+00:00"
+        },
+        {
+            "name": "windwalker/session",
+            "version": "4.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/windwalker-io/session.git",
+                "reference": "d5daea43adc0ca5ba4905c5df411e1fcfd738bba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/windwalker-io/session/zipball/d5daea43adc0ca5ba4905c5df411e1fcfd738bba",
+                "reference": "d5daea43adc0ca5ba4905c5df411e1fcfd738bba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.4.6",
+                "windwalker/cache": "^4.0",
+                "windwalker/utilities": "^4.0"
+            },
+            "require-dev": {
+                "asika/sql-splitter": "^1.0",
+                "mikey179/vfsstream": "^1.6",
+                "mockery/mockery": "^1.4",
+                "phpunit/phpunit": "^10.0||^11.0||^12.0",
+                "webmozart/glob": "^4.1",
+                "windwalker/data": "^4.0",
+                "windwalker/database": "^4.0",
+                "windwalker/filesystem": "^4.0",
+                "windwalker/test": "^4.0"
+            },
+            "type": "windwalker-package",
+            "extra": {
+                "windwalker": {
+                    "packages": [
+                        "Windwalker\\Session\\SessionPackage"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/bootstrap.php"
+                ],
+                "psr-4": {
+                    "Windwalker\\Session\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Windwalker Session package",
+            "homepage": "https://github.com/windwalker-io/session",
+            "keywords": [
+                "framework",
+                "session",
+                "windwalker"
+            ],
+            "support": {
+                "source": "https://github.com/windwalker-io/session/tree/4.2.3"
+            },
+            "time": "2025-10-19T16:58:52+00:00"
         },
         {
             "name": "windwalker/stream",
